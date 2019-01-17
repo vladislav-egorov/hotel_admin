@@ -23,7 +23,7 @@ public class DBUtil {
         database = Database.forUrlAndCredentials(url, username, password);
     }
 
-    public <T> List<T> fetchAll(@SQL String sqlQuery, Class<T> returnClass) {
+    public <T> List<T> fetchAll(SqlQuery sqlQuery, Class<T> returnClass) {
         return database.findAll(returnClass, sqlQuery);
     }
 
