@@ -1,28 +1,39 @@
 package fx;
 
 import db.HotelDb;
-import db.mappers.Visitor;
+import db.mappers.Manager;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.temporal.ChronoUnit;
+public class FXRunner extends Application {
+    public static final FXGeneral FX_GENERAL = new FXGeneral();
 
-public class FXRunner {
+    private static final String URL = "jdbc:mysql://127.0.0.1:3307/hotel?useSSL=false";
+    private static final String USERNAME = "admin";
+    private static final String PASSWORD = "admin";
+
+    public static final HotelDb HOTEL_DB = new HotelDb(URL, USERNAME, PASSWORD);
+
+    public static Manager currentUser = null;
+
     public static void main(String[] args) {
-        String url = "jdbc:mysql://127.0.0.1:3307/hotel?useSSL=false";
-        String username = "admin";
-        String password = "admin";
-        HotelDb db = new HotelDb(url, username, password);
-        Visitor visitor = new Visitor(
+        launch(args);
+        //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+       /* Visitor visitor = new Visitor(
                 1,
                 "Kylie",
                 "Haig",
-                LocalDate.now().minus(15, ChronoUnit.DAYS),
-                LocalDate.now().minus(5, ChronoUnit.DAYS),
-                9,
+                LocalDate.parse("26/01/2019", formatter),
+                LocalDate.parse("27/01/2019", formatter),
+                30,
                 2
         );
-        db.addNewVisitor(visitor);
-        System.out.println(db.getAllVisitors());
+        Integer qty = db.availableRoomsQtyForDateAndType(LocalDate.parse("26/01/2019", formatter), 3);*/
+
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        FX_GENERAL.openNewStandartWindow("Вход в систему", "main");
     }
 }

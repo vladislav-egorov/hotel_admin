@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="fx.controllers.AllVisitorsController">
+    <Pane prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #696969;">
+        <Text fill="#73ff69" layoutX="77.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Hotel Administrator Tool" wrappingWidth="467.47058823529414">
+            <font>
+                <Font name="Roboto Black" size="39.0"/>
+            </font>
+        </Text>
+    </Pane>
+    <TableView fx:id="visitorsTable" layoutX="14.0" layoutY="108.0" prefHeight="285.0" prefWidth="576.0">
+        <columns>
+            <TableColumn fx:id="firstName" prefWidth="116.0" text="Имя"/>
+            <TableColumn fx:id="lastName" prefWidth="138.0" text="Фамилия"/>
+            <TableColumn fx:id="startVisit" prefWidth="99.0" text="Дата заезда"/>
+            <TableColumn fx:id="endVisit" prefWidth="113.0" text="Дата выезда"/>
+            <TableColumn fx:id="roomId" prefWidth="90.0" text="Номер комнаты"/>
+        </columns>
+    </TableView>
+</AnchorPane>

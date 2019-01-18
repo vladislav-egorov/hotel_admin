@@ -24,22 +24,33 @@ public class DBUtil {
     }
 
     public <T> List<T> fetchAll(SqlQuery sqlQuery, Class<T> returnClass) {
+        System.out.println("SQL EXEC: " + sqlQuery);
         return database.findAll(returnClass, sqlQuery);
     }
 
+    public String fetchByRowAndColumn(SqlQuery sqlQuery, Integer row, String columnName) {
+        System.out.println("SQL EXEC: " + sqlQuery);
+        Object result = database.findTable(sqlQuery).get(row, columnName);
+        return result.toString();
+    }
+
     public ResultTable findTable(SqlQuery sqlQuery) {
+        System.out.println("SQL EXEC: " + sqlQuery);
         return database.findTable(sqlQuery);
     }
 
     public <T> T fetchOne(@SQL String sqlQuery, Class<T> returnClass) {
+        System.out.println("SQL EXEC: " + sqlQuery);
         return database.findUnique(returnClass, sqlQuery);
     }
 
     public <T> T executeQuery(SqlQuery sqlQuery, Class<T> tClass) {
+        System.out.println("SQL EXEC: " + sqlQuery);
         return database.findOptional(tClass, sqlQuery).orElse(null);
     }
 
     public void update(SqlQuery sqlQuery) {
+        System.out.println("SQL EXEC: " + sqlQuery);
         database.update(sqlQuery);
     }
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="fx.controllers.StatsController">
+    <Pane prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #696969;">
+        <Text fill="#73ff69" layoutX="77.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Hotel Administrator Tool" wrappingWidth="467.47058823529414">
+            <font>
+                <Font name="Roboto Black" size="39.0"/>
+            </font>
+        </Text>
+    </Pane>
+    <Text fx:id="fullNameText" layoutX="73.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вася Пупкин"
+          wrappingWidth="373.13671875">
+        <font>
+            <Font name="Consolas" size="27.0"/>
+        </font>
+    </Text>
+    <Text layoutX="73.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Уровень"
+          wrappingWidth="110.13671875">
+        <font>
+            <Font name="Consolas" size="20.0"/>
+        </font>
+    </Text>
+    <Text layoutX="73.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Привлечено клиентов"
+          wrappingWidth="240.13671875">
+        <font>
+            <Font name="Consolas" size="20.0"/>
+        </font>
+    </Text>
+    <Text fx:id="gradeLvlText" layoutX="313.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3"
+          wrappingWidth="110.13671875">
+        <font>
+            <Font name="Consolas" size="20.0"/>
+        </font>
+    </Text>
+    <Text fx:id="clientsQtyText" layoutX="313.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55"
+          wrappingWidth="77.13671875">
+        <font>
+            <Font name="Consolas" size="20.0"/>
+        </font>
+    </Text>
+
+</AnchorPane>

@@ -15,7 +15,17 @@ public class Visitor {
 
     @DalesbredInstantiator
     public Visitor(int id, String firstName, String lastName, LocalDate startVisit, LocalDate endVisit, int roomId, int managerId) {
-        this.id = id;
+        this.id = 9999;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.startVisit = startVisit;
+        this.endVisit = endVisit;
+        this.roomId = roomId;
+        this.managerId = managerId;
+    }
+
+    public Visitor(String firstName, String lastName, LocalDate startVisit, LocalDate endVisit, int roomId, int managerId) {
+        this.id = 9999;
         this.firstName = firstName;
         this.lastName = lastName;
         this.startVisit = startVisit;
