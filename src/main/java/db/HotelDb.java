@@ -6,7 +6,6 @@ import org.dalesbred.query.SqlQuery;
 import org.dalesbred.result.ResultTable;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,16 +16,6 @@ public class HotelDb {
 
     public HotelDb(String url, String userName, String password) {
         this.database = new DBUtil(url, userName, password);
-    }
-
-    public static void main(String[] args) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        String URL = "jdbc:mysql://127.0.0.1:3307/hotel?useSSL=false";
-        String USERNAME = "admin";
-        String PASSWORD = "admin";
-
-        HotelDb HOTEL_DB = new HotelDb(URL, USERNAME, PASSWORD);
-        HOTEL_DB.availableRoomsQtyForDateAndType(LocalDate.parse("26/01/2019", formatter), 2);
     }
 
     public boolean isUserAndPasswordValid(String username, String password) {

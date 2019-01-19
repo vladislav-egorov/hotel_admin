@@ -18,18 +18,6 @@ public class FXRunner extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-       /* Visitor visitor = new Visitor(
-                1,
-                "Kylie",
-                "Haig",
-                LocalDate.parse("26/01/2019", formatter),
-                LocalDate.parse("27/01/2019", formatter),
-                30,
-                2
-        );
-        Integer qty = db.availableRoomsQtyForDateAndType(LocalDate.parse("26/01/2019", formatter), 3);*/
-
     }
 
     @Override
